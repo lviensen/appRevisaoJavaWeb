@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Bem vindo</h1>
+
+	<h1>${usuario.login} -autenticado!</h1>
+	
+	<a href="ServletController?opcao=CadastrarUsuario.jsp" >Cadastro de Usuário</a>
 </body>
 </html>

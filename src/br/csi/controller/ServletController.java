@@ -29,6 +29,18 @@ public class ServletController extends HttpServlet {
     }
 
     protected void  service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	
+    	String opcao = request.getParameter("opcao");
+    	
+    	if(opcao.equals("logar")){
+    		String login = request.getParameter("login");
+        	String senha = request.getParameter("senha");
+        	
+        	Usuario u = new Usuario();
+        	u.setLogin(login);
+        	u.setSenha(senha);
+    	}
+    	
     	String login = request.getParameter("login");
     	String senha = request.getParameter("senha");
     	
@@ -42,11 +54,13 @@ public class ServletController extends HttpServlet {
     		boolean retorno = uD.autenticado(u);
     		if(retorno){
 
-    			String pagina = "/principal.jsp";
+    			String pagina = "/WEB-INF/jsp/principal.jsp";
+    			request.setAttribute("usuario", u);
     			dispatcher = getServletContext().getRequestDispatcher(pagina);
     			dispatcher.forward(request, response);
     		}else{
     			String pagina = "/index.jsp";
+    			request.setAttribute("msg", "Erro ao Logar!");
     			dispatcher = getServletContext().getRequestDispatcher(pagina);
     			dispatcher.forward(request, response);
     		}
