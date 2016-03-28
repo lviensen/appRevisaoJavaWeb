@@ -30,17 +30,6 @@ public class ServletController extends HttpServlet {
 
     protected void  service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	
-    	String opcao = request.getParameter("opcao");
-    	
-    	if(opcao.equals("logar")){
-    		String login = request.getParameter("login");
-        	String senha = request.getParameter("senha");
-        	
-        	Usuario u = new Usuario();
-        	u.setLogin(login);
-        	u.setSenha(senha);
-    	}
-    	
     	String login = request.getParameter("login");
     	String senha = request.getParameter("senha");
     	
@@ -50,6 +39,24 @@ public class ServletController extends HttpServlet {
     	
     	UsuarioDao uD = new UsuarioDao();
     	RequestDispatcher dispatcher;
+    	
+    	String opcao = request.getParameter("opcao");
+    	System.out.println(""+login);
+    	System.out.println(""+senha);
+    	
+    	if(opcao.equals("logar")){
+    		
+    	}
+    	else if(opcao.equals("CadastraUsuario")){
+    		String pagina = "/WEB-INF/jsp/CadastraUsuario.jsp";
+			request.setAttribute("usuario", u);
+			dispatcher = getServletContext().getRequestDispatcher(pagina);
+			dispatcher.forward(request, response);
+    	}
+    	else{
+    		System.out.println("Nenhuma detecção!! ");
+    	}
+    	
     	try{
     		boolean retorno = uD.autenticado(u);
     		if(retorno){
