@@ -12,7 +12,7 @@ public class LogarLogica implements Logica{
 
 	public String executa(HttpServletRequest rq, HttpServletResponse rp){
 		
-		System.out.println("...dentro do executa logarLogica");
+		System.out.println("...dentro do executa LogarLogica");
 		
 		String login = rq.getParameter("login");
 		String senha = rq.getParameter("senha");

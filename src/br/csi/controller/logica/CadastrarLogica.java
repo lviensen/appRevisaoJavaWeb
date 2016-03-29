@@ -13,7 +13,7 @@ public class CadastrarLogica implements Logica{
 	
 public String executa(HttpServletRequest rq, HttpServletResponse rp){
 		
-		System.out.println("...dentro do executa logarLogica");
+		System.out.println("...dentro do executa CadastrarLogica");
 		
 		String login = rq.getParameter("login");
 		String senha = rq.getParameter("senha");
@@ -26,12 +26,12 @@ public String executa(HttpServletRequest rq, HttpServletResponse rp){
 		
 		//uD.autenticado(u);
 		
-		String pagina = "/index.jsp";
+		String pagina = "/WEB-INF/jsp/principal.jsp";
 		
 		try{
 			boolean retorno = uD.autenticado(u);
 			if(retorno){
-				pagina = "/WEB-INF/jsp/principal.jsp";
+				pagina = "/WEB-INF/jsp/CadastrarUsuario.jsp";
 				rq.setAttribute("usuario", u);
 			}
 			else{

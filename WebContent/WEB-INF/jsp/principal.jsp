@@ -10,7 +10,7 @@
 
 	<h1>${usuario.login} -autenticado!</h1>
 	
-	<a href="ServletController?opcao=CadastraUsuario.jsp" >Cadastro de Usuário</a>
+	<a href="/appRevisaoJavaWeb/mvc?logica=CadastrarLogica" >Cadastro de Usuário</a>
 	
 </body>
 </html>
