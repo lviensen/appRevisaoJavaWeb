@@ -8,9 +8,10 @@ import javax.servlet.http.HttpServletResponse;
 import br.csi.model.Usuario;
 import br.csi.model.dao.UsuarioDao;
 
-public class LogarLogica implements Logica{
+public class CadastrarLogica implements Logica{
 
-	public String executa(HttpServletRequest rq, HttpServletResponse rp){
+	
+public String executa(HttpServletRequest rq, HttpServletResponse rp){
 		
 		System.out.println("...dentro do executa logarLogica");
 		
@@ -45,5 +46,4 @@ public class LogarLogica implements Logica{
 		
 		return pagina;   //"/WEB-INF/jsp/principal.jsp"
 	}
-	
 }
