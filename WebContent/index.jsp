@@ -9,7 +9,7 @@
 <title>LOGAR NA APLICAÇÃO</title>
 </head>
 <body>
-	<form action="/mvc?Logica=logarLogica" method="post"> 
+	<form action="/appRevisaoJavaWeb/mvc?logica=LogarLogica" method="post"> 
 		<label for="login">Login:</label>
 		<input type="text" id="login" name="login"/> <br/>
 		<label for="senha">Senha:</label>
