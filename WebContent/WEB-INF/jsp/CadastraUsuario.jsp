@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<<<<<<< HEAD
 	
 	<section>
 	<form action="/appRevisaoJavaWeb/mvc?logica=InserirUsuarioLogica"
@@ -56,5 +57,19 @@
 	</table>
 
 	</section>
+=======
+	<h1>Cadastrar Usuario</h1>
+	
+	<form action="/appRevisaoJavaWeb/mvc?logica=CadastrarLogica" method="post"> 
+		<label for="login">Login:</label>
+		<input type="text" id="login" name="login"/> <br/>
+		<label for="senha">Senha:</label>
+		<input type="text" id="senha" name="senha"><br/>
+		
+		<button type="submit" name="opcao" value="cadastrar">Cadastrar:</button> 
+		
+	</form>
+	
+>>>>>>> b68f3ed5d3e8fedfec28666b4f3ef99e0989279f
 </body>
 </html>

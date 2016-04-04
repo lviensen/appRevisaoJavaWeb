@@ -10,7 +10,11 @@
 
 	<h1>${usuario.login} -autenticado!</h1>
 	
+<<<<<<< HEAD
 	<a href="mvc?logica=RedirecionaCadastraUsuarioLogica" >Cadastro de Usuário</a>
+=======
+	<a href="/appRevisaoJavaWeb/mvc?logica=CadastrarLogica" >Cadastro de Usuário</a>
+>>>>>>> b68f3ed5d3e8fedfec28666b4f3ef99e0989279f
 	
 </body>
 </html>
